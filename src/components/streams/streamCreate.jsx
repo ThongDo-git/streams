@@ -13,7 +13,6 @@ class StreamCreate extends Component {
   }
 
   renderInput = ({ input, label, meta }) => {
-    console.log(meta);
     return (
       <div className="field">
         <label>{label}</label>
@@ -30,7 +29,7 @@ class StreamCreate extends Component {
   render() {
     return (
       <form
-        className="ui form"
+        className="ui form error"
         onSubmit={this.props.handleSubmit(this.onSubmit)}
       >
         <Field name="title" component={this.renderInput} label="Enter title" />
