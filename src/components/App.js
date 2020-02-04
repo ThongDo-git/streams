@@ -6,12 +6,12 @@ import StreamEdit from "./streams/streamEdit";
 import StreamList from "./streams/streamList";
 import StreamShow from "./streams/streamShow";
 import Header from "./header";
-import createBrowserHistory from "./../history";
+import history from "../history";
 
 const App = () => {
   return (
     <div className="ui container">
-      <Router history={createBrowserHistory}>
+      <Router history={history}>
         <Header />
         <Route path="/streams/new" component={StreamCreate} />
         <Route path="/streams/delete" component={StreamDelete} />
