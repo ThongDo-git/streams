@@ -1,8 +1,8 @@
-import React, { Component } from "react";
+import React from "react";
 import { Field, reduxForm } from "redux-form";
 
-class StreamForm extends Component {
-  renderError({ error, touched }) {
+class StreamForm extends React.Component {
+  renderError({ touched, error }) {
     if (touched && error) {
       return (
         <div className="ui error message">
@@ -16,7 +16,7 @@ class StreamForm extends Component {
     return (
       <div className="field">
         <label>{label}</label>
-        <input {...input} autoComplete="off" />
+        <input {...input} />
         {this.renderError(meta)}
       </div>
     );
