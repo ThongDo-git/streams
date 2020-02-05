@@ -20,7 +20,7 @@ class StreamEdit extends Component {
 
     return (
       <div>
-        <h3>Edit Title</h3>
+        <h3>Edit Stream</h3>
         <StreamForm
           initialValues={_.pick(this.props.stream, "title", "description")}
           onSubmit={this.onSubmit}

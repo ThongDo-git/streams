@@ -3,6 +3,8 @@ import { connect } from "react-redux";
 import { signIn, signOut } from "../actions";
 
 class GoogleAuth extends Component {
+  state = { isSignedIn: null };
+
   componentDidMount() {
     window.gapi.load("client:auth2", () => {
       window.gapi.client
@@ -13,7 +15,7 @@ class GoogleAuth extends Component {
         })
         .then(() => {
           this.auth = window.gapi.auth2.getAuthInstance();
-          this.onAuthChange(this.auth.isSignedIn.get());
+          this.onAuthChange(this.auth.isSignedIn);
           this.auth.isSignedIn.listen(this.onAuthChange);
         });
     });
