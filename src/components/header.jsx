@@ -7,7 +7,7 @@ class Header extends Component {
     return (
       <div className="ui secondary pointing menu">
         <Link to="/" className="item">
-          Streamer
+          Streamers
         </Link>
         <div className="right menu">
           <Link to="/" className="item">
